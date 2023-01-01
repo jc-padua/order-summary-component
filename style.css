@@ -29,7 +29,7 @@ html {
 body {
     background-image: url("images/pattern-background-mobile.svg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
     font-family: 'Red Hat Display', sans-serif;
 }
 
@@ -53,19 +53,19 @@ img {
 }
 
 .card-body h1 {
-    margin: 2rem 0;
+    margin: 1.5rem 0;
     font-weight: 900;
 }
 
 .card-body p {
-    line-height: 2rem;
+    line-height: 1.5rem;
     padding: 0 4rem;
     color: var(--desaturated-blue);
 }
 
 .card-plan {
     background-color: var(--very-pale-blue);
-    margin: 2rem;
+    margin: 1.5rem;
     border-radius: 1.5rem;
     display: flex;
     align-items: center;
@@ -86,12 +86,17 @@ img {
     line-height: 1.5rem;
 }
 
-.price-text {
+.price-text,
+.cancel {
     color: var(--desaturated-blue);
 }
 
 .plan-image {
     width: 3.5rem;
+}
+
+.change-text:hover {
+    text-decoration: none;
 }
 
 .card-footer {
@@ -115,4 +120,24 @@ img {
 .btn-blue:hover {
     opacity: 70%;
     color: #FFF;
+}
+
+.cancel:hover {
+    color: var(--dark-blue);
+}
+
+
+@media (min-width: 375px) {
+    body {
+        background-image: url("images/pattern-background-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: grid;
+        place-items: center;
+        background-color: var(--pale-blue);
+    }
+
+    .card-container {
+        width: 30rem;
+    }
 }
